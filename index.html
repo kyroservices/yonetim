@@ -4,168 +4,176 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KyroServices Global – Yönetim Duyurusu (01.09.2025)</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0b1020;          /* koyu zemin */
-      --card:#111831;        /* kart */
-      --muted:#8ea0c2;       /* ikincil metin */
-      --text:#eaf1ff;        /* ana metin */
-      --accent:#5aa0ff;      /* vurgu */
-      --accent-2:#7bd3ff;    /* ikincil vurgu */
-      --border:#203055;      /* kenarlık */
+    body{
+      margin:0;
+      font-family:Inter, sans-serif;
+      background:#f3f6fb;
+      color:#1a1a1a;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:linear-gradient(180deg,#0b1020 0%,#0e1731 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    .wrap{max-width:1100px;margin:48px auto;padding:0 20px}
-
-    .brandbar{display:flex;align-items:center;gap:16px;margin-bottom:28px}
-    .brandbar img{width:64px;height:64px;border-radius:16px;border:1px solid var(--border);background:#fff;object-fit:cover}
-    .brandbar .titles{line-height:1.15}
-    .brandbar .titles h1{margin:0;font-size:28px;font-weight:800;letter-spacing:.2px}
-    .brandbar .titles .meta{margin-top:4px;font-size:14px;color:var(--muted)}
-
-    .card{background:rgba(17,24,49,.7);backdrop-filter:saturate(150%) blur(6px);border:1px solid var(--border);border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-
-    .section{padding:24px 22px 8px 22px;border-bottom:1px solid var(--border)}
-    .section:last-child{border-bottom:none;padding-bottom:24px}
-    .section h2{margin:0 0 12px 0;font-size:18px;font-weight:700;color:#d8e6ff}
-    .section p{margin:0 0 10px 0;color:var(--text);opacity:.95}
-
-    .badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:#0b1020;background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:8px 12px;border-radius:999px;letter-spacing:.3px;text-transform:uppercase}
-
-    /* tablo */
-    .table-wrap{padding:0 22px 22px}
-    table{width:100%;border-collapse:separate;border-spacing:0;background:rgba(12,18,40,.65);border:1px solid var(--border);border-radius:16px;overflow:hidden}
-    thead th{background:linear-gradient(180deg,rgba(90,160,255,.18),rgba(90,160,255,.06));color:#eaf1ff;font-size:13px;font-weight:700;text-align:left;padding:14px 14px;border-bottom:1px solid var(--border)}
-    tbody td{padding:12px 14px;border-bottom:1px solid rgba(32,48,85,.7);font-size:14px;color:#e7eeff}
-    tbody tr:last-child td{border-bottom:none}
-    tbody tr:hover{background:rgba(90,160,255,.07)}
-    .col-name{font-weight:700}
-    .muted{color:var(--muted)}
-
-    /* duyuru kutusu */
-    .announce{padding:22px}
-    .announce .title{font-size:22px;font-weight:800;margin:0 0 6px}
-    .announce .subtitle{color:var(--muted);margin:0 0 16px}
-    .announce ul{margin:0 0 2px 22px}
-    .announce li{margin:6px 0}
-
-    .footer{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px;color:var(--muted);font-size:13px}
-    .sig{display:flex;flex-direction:column;gap:2px}
-    .sig .line{height:1px;background:var(--border);width:220px;margin:10px 0 2px}
-
-    @media (max-width:680px){
-      .brandbar .titles h1{font-size:22px}
-      .brandbar img{width:56px;height:56px}
-      .announce .title{font-size:20px}
-      thead th,tbody td{font-size:13px}
+    .page{
+      max-width:1000px;
+      margin:40px auto;
+      background:#fff;
+      border:1px solid #d0d6e0;
+      border-radius:16px;
+      box-shadow:0 6px 24px rgba(0,0,0,.08);
+      padding:40px;
+    }
+    .header{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      border-bottom:2px solid #e4e8f0;
+      padding-bottom:20px;
+      margin-bottom:30px;
+    }
+    .header img{
+      width:80px;
+      height:80px;
+      object-fit:contain;
+      border-radius:12px;
+      border:1px solid #ccc;
+      background:#fff;
+    }
+    .header h1{
+      font-size:26px;
+      font-weight:800;
+      margin:0;
+      color:#0c2340;
+    }
+    .header .meta{
+      font-size:14px;
+      color:#666;
+      margin-top:6px;
+    }
+    .badge{
+      display:inline-block;
+      padding:8px 14px;
+      font-size:13px;
+      font-weight:600;
+      background:#0c2340;
+      color:#fff;
+      border-radius:8px;
+      margin-bottom:20px;
+      text-transform:uppercase;
+      letter-spacing:.5px;
+    }
+    h2{
+      font-size:20px;
+      margin:16px 0 12px;
+      color:#0c2340;
+    }
+    ul{
+      margin:0 0 20px 20px;
+      padding:0;
+    }
+    ul li{
+      margin:6px 0;
+      font-size:15px;
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:20px;
+      border:1px solid #d0d6e0;
+      border-radius:10px;
+      overflow:hidden;
+      font-size:14px;
+    }
+    thead{
+      background:#0c2340;
+      color:#fff;
+    }
+    thead th{
+      text-align:left;
+      padding:12px;
+      font-weight:600;
+      font-size:14px;
+    }
+    tbody td{
+      padding:12px;
+      border-bottom:1px solid #e4e8f0;
+    }
+    tbody tr:last-child td{
+      border-bottom:none;
+    }
+    tbody tr:hover{
+      background:#f9fbfd;
+    }
+    .footer{
+      margin-top:40px;
+      padding-top:20px;
+      border-top:2px solid #e4e8f0;
+      display:flex;
+      justify-content:space-between;
+      font-size:13px;
+      color:#555;
+    }
+    .sig{
+      text-align:left;
+    }
+    .sig .line{
+      width:220px;
+      height:1px;
+      background:#ccc;
+      margin:10px 0;
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="brandbar">
-      <img src="https://kyrosil.eu/wp-content/uploads/2025/07/290299_a04d46893aa7d9c461374e6ce89f8267-11_7_2022-10_38_08-AM-300x300.png?crop=1" alt="KyroServices Global Logo" />
-      <div class="titles">
+  <div class="page">
+    <div class="header">
+      <img src="https://kyrosil.eu/wp-content/uploads/2025/07/290299_a04d46893aa7d9c461374e6ce89f8267-11_7_2022-10_38_08-AM-300x300.png?crop=1" alt="KyroServices Global Logo">
+      <div>
         <h1>KyroServices Global – Yönetim Duyurusu</h1>
         <div class="meta">01 Eylül 2025 · Resmî Bildirim</div>
       </div>
     </div>
 
-    <!-- DUYURU -->
-    <div class="card announce" style="margin-bottom:18px">
-      <div class="badge">Onayım ve Yönetim Kurulu Kararıyla</div>
-      <h2 class="title">Yönetim Yapısında Görev Değişiklikleri</h2>
-      <p class="subtitle">01 Eylül 2025 tarihi itibarıyla aşağıdaki atamalar gerçekleştirilmiştir.</p>
-      <ul>
-        <li><strong>Buse Melis OYGUN</strong> – <em>K&amp;D History Services Türkiye</em> markasında <strong>Genel Direktör</strong>.</li>
-        <li><strong>Selin YILMAZ</strong> – <em>Burger King &amp; Starbucks Franchises</em> için <strong>Genel Koordinatör</strong>.</li>
-        <li><strong>Mimar Melike SARGIN</strong> – <em>ReziKyros</em> markasında <strong>Genel Müdür</strong>.</li>
-      </ul>
-      <p style="margin-top:12px">Aşağıda, görevlerinde devam eden yönetim ekibimizle birlikte güncel tablo yer almaktadır.</p>
-    </div>
+    <div class="badge">Onayım ve Yönetim Kurulu Kararıyla</div>
+    <h2>Yönetim Yapısında Görev Değişiklikleri</h2>
+    <p>01 Eylül 2025 tarihi itibarıyla aşağıdaki atamalar gerçekleştirilmiştir:</p>
+    <ul>
+      <li><strong>Buse Melis OYGUN</strong> – K&amp;D History Services Türkiye, <em>Genel Direktör</em></li>
+      <li><strong>Selin YILMAZ</strong> – Burger King &amp; Starbucks Franchises, <em>Genel Koordinatör</em></li>
+      <li><strong>Mimar Melike SARGIN</strong> – ReziKyros, <em>Genel Müdür</em></li>
+    </ul>
 
-    <!-- TABLO -->
-    <div class="table-wrap">
-      <div class="card" style="overflow:hidden">
-        <table>
-          <thead>
-            <tr>
-              <th>İsim</th>
-              <th>Görev Unvanı</th>
-              <th>Sorumlu Olduğu Marka / Alan</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="col-name">Kyros I. DUGAN (KD)</td>
-              <td>Kurucu &amp; Sahibi</td>
-              <td>KyroServices Global</td>
-            </tr>
-            <tr>
-              <td class="col-name">Alissa KIRAKIS (AK)</td>
-              <td>Genel Direktör</td>
-              <td>KyroServices Global</td>
-            </tr>
-            <tr>
-              <td class="col-name">Gamze ÖZDEN (GÖ)</td>
-              <td>Genel Direktör</td>
-              <td>KyroServices Türkiye &amp; Yunandan Gelsin</td>
-            </tr>
-            <tr>
-              <td class="col-name">Dimitri LYANOS (DL)</td>
-              <td>Genel Direktör</td>
-              <td>K&amp;D History Services Avrupa &amp; ABD</td>
-            </tr>
-            <tr>
-              <td class="col-name">Buse Melis OYGUN (BMO)</td>
-              <td>Genel Direktör</td>
-              <td>K&amp;D History Services Türkiye</td>
-            </tr>
-            <tr>
-              <td class="col-name">Mehmet SADİOĞLU (MS)</td>
-              <td>Genel Müdür</td>
-              <td>PeP</td>
-            </tr>
-            <tr>
-              <td class="col-name">Fatma BAYSAN (FB)</td>
-              <td>Genel Müdür</td>
-              <td>Kosmos Vize</td>
-            </tr>
-            <tr>
-              <td class="col-name">Fevzi Cem İZ (FCİ)</td>
-              <td>Genel Müdür</td>
-              <td>Kampüs Giyim</td>
-            </tr>
-            <tr>
-              <td class="col-name">Mimar Melike SARGIN (MSR)</td>
-              <td>Genel Müdür</td>
-              <td>ReziKyros</td>
-            </tr>
-            <tr>
-              <td class="col-name">Selin YILMAZ (SY)</td>
-              <td>Genel Koordinatör</td>
-              <td>Burger King &amp; Starbucks Franchises</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    <h2>Güncel Yönetim Tablosu</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>İsim</th>
+          <th>Görev Unvanı</th>
+          <th>Sorumlu Olduğu Marka / Alan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Kyros I. DUGAN (KD)</td><td>Kurucu &amp; Sahibi</td><td>KyroServices Global</td></tr>
+        <tr><td>Alissa KIRAKIS (AK)</td><td>Genel Direktör</td><td>KyroServices Global</td></tr>
+        <tr><td>Gamze ÖZDEN (GÖ)</td><td>Genel Direktör</td><td>KyroServices Türkiye &amp; Yunandan Gelsin</td></tr>
+        <tr><td>Dimitri LYANOS (DL)</td><td>Genel Direktör</td><td>K&amp;D History Services Avrupa &amp; ABD</td></tr>
+        <tr><td>Buse Melis OYGUN (BMO)</td><td>Genel Direktör</td><td>K&amp;D History Services Türkiye</td></tr>
+        <tr><td>Mehmet SADİOĞLU (MS)</td><td>Genel Müdür</td><td>PeP</td></tr>
+        <tr><td>Fatma BAYSAN (FB)</td><td>Genel Müdür</td><td>Kosmos Vize</td></tr>
+        <tr><td>Fevzi Cem İZ (FCİ)</td><td>Genel Müdür</td><td>Kampüs Giyim</td></tr>
+        <tr><td>Mimar Melike SARGIN (MSR)</td><td>Genel Müdür</td><td>ReziKyros</td></tr>
+        <tr><td>Selin YILMAZ (SY)</td><td>Genel Koordinatör</td><td>Burger King &amp; Starbucks Franchises</td></tr>
+      </tbody>
+    </table>
 
-    <!-- FOOTER / İMZA BLOĞU -->
     <div class="footer">
       <div class="sig">
         <div class="line"></div>
         <div>KyroServices Global Yönetim Kurulu</div>
         <div>Atina, 01.09.2025</div>
       </div>
-      <div style="opacity:.85">© 2025 KyroServices Global. Tüm hakları saklıdır.</div>
+      <div>© 2025 KyroServices Global. Tüm hakları saklıdır.</div>
     </div>
-
   </div>
 </body>
 </html>
+
 
