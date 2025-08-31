@@ -6,124 +6,40 @@
   <title>KyroServices Global – Yönetim Duyurusu (01.09.2025)</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body{
-      margin:0;
-      font-family:Inter, sans-serif;
-      background:#f3f6fb;
-      color:#1a1a1a;
-    }
-    .page{
-      max-width:1000px;
-      margin:40px auto;
-      background:#fff;
-      border:1px solid #d0d6e0;
-      border-radius:16px;
-      box-shadow:0 6px 24px rgba(0,0,0,.08);
-      padding:40px;
-    }
-    .header{
-      display:flex;
-      align-items:center;
-      gap:20px;
-      border-bottom:2px solid #e4e8f0;
-      padding-bottom:20px;
-      margin-bottom:30px;
-    }
-    .header img{
-      width:80px;
-      height:80px;
-      object-fit:contain;
-      border-radius:12px;
-      border:1px solid #ccc;
-      background:#fff;
-    }
-    .header h1{
-      font-size:26px;
-      font-weight:800;
-      margin:0;
-      color:#0c2340;
-    }
-    .header .meta{
-      font-size:14px;
-      color:#666;
-      margin-top:6px;
-    }
-    .badge{
-      display:inline-block;
-      padding:8px 14px;
-      font-size:13px;
-      font-weight:600;
-      background:#0c2340;
-      color:#fff;
-      border-radius:8px;
-      margin-bottom:20px;
-      text-transform:uppercase;
-      letter-spacing:.5px;
-    }
-    h2{
-      font-size:20px;
-      margin:16px 0 12px;
-      color:#0c2340;
-    }
-    ul{
-      margin:0 0 20px 20px;
-      padding:0;
-    }
-    ul li{
-      margin:6px 0;
-      font-size:15px;
-    }
-    table{
-      width:100%;
-      border-collapse:collapse;
-      margin-top:20px;
-      border:1px solid #d0d6e0;
-      border-radius:10px;
-      overflow:hidden;
-      font-size:14px;
-    }
-    thead{
-      background:#0c2340;
-      color:#fff;
-    }
-    thead th{
-      text-align:left;
-      padding:12px;
-      font-weight:600;
-      font-size:14px;
-    }
-    tbody td{
-      padding:12px;
-      border-bottom:1px solid #e4e8f0;
-    }
-    tbody tr:last-child td{
-      border-bottom:none;
-    }
-    tbody tr:hover{
-      background:#f9fbfd;
-    }
-    .footer{
-      margin-top:40px;
-      padding-top:20px;
-      border-top:2px solid #e4e8f0;
-      display:flex;
-      justify-content:space-between;
-      font-size:13px;
-      color:#555;
-    }
-    .sig{
-      text-align:left;
-    }
-    .sig .line{
-      width:220px;
-      height:1px;
-      background:#ccc;
-      margin:10px 0;
-    }
+    body{margin:0;font-family:Inter, sans-serif;background:#eef3f9;color:#1a1a1a}
+    .page{position:relative;max-width:1000px;margin:40px auto;background:#fff;border:1px solid #d0d6e0;border-radius:16px;box-shadow:0 6px 24px rgba(0,0,0,.08);padding:40px;overflow:hidden}
+    /* KURUMSAL FİLİGRAN – Ortada daha görünür */
+    .page::before{content:"";position:absolute;inset:0;pointer-events:none;background:url('https://kyrosil.eu/wp-content/uploads/2025/07/290299_a04d46893aa7d9c461374e6ce89f8267-11_7_2022-10_38_08-AM-300x300.png?crop=1') no-repeat 50% 45%/480px auto;opacity:.13;filter:grayscale(100%)}
+    /* Üst ince kurumsal şerit */
+    .page::after{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,#0c2340,#2c5aa0)}
+
+    .header{position:relative;display:flex;align-items:center;gap:20px;border-bottom:2px solid #e4e8f0;padding-bottom:20px;margin-bottom:30px}
+    .header img{width:80px;height:80px;object-fit:contain;border-radius:12px;border:1px solid #d7dce6;background:#fff}
+    .header h1{font-size:26px;font-weight:800;margin:0;color:#0c2340}
+    .header .meta{font-size:14px;color:#666;margin-top:6px}
+
+    .badge{display:inline-block;padding:8px 14px;font-size:13px;font-weight:600;background:#0c2340;color:#fff;border-radius:8px;margin-bottom:20px;text-transform:uppercase;letter-spacing:.5px}
+    h2{font-size:20px;margin:16px 0 12px;color:#0c2340}
+    p{margin:0 0 10px}
+    ul{margin:0 0 20px 20px;padding:0}
+    ul li{margin:6px 0;font-size:15px}
+
+    table{width:100%;border-collapse:collapse;margin-top:16px;border:1px solid #d0d6e0;border-radius:10px;overflow:hidden;font-size:14px;background:#fff}
+    thead{background:#0c2340;color:#fff}
+    thead th{text-align:left;padding:12px;font-weight:600;font-size:14px}
+    tbody td{padding:12px;border-bottom:1px solid #e4e8f0}
+    tbody tr:last-child td{border-bottom:none}
+    tbody tr:hover{background:#f7f9fc}
+
+    .footer{margin-top:36px;padding-top:18px;border-top:2px solid #e4e8f0;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#555}
+    .sig{text-align:left}
+    .sig .line{width:220px;height:1px;background:#cfd6e3;margin:10px 0}
+
+    @media (max-width:1000px){.page{margin:20px}} 
   </style>
 </head>
 <body>
-  <div class="page">
+  <div class="page" aria-label="KyroServices Global – Yönetim Duyurusu, 01.09.2025">
     <div class="header">
       <img src="https://kyrosil.eu/wp-content/uploads/2025/07/290299_a04d46893aa7d9c461374e6ce89f8267-11_7_2022-10_38_08-AM-300x300.png?crop=1" alt="KyroServices Global Logo">
       <div>
@@ -175,5 +91,3 @@
   </div>
 </body>
 </html>
-
-
